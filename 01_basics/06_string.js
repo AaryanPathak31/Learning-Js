@@ -41,4 +41,6 @@ console.log(newStringOne);
 console.log(newStringOne.trim());  //trim only works on blank spaces.
 
 const url="https://www.mtlnovel.com/reborn-capital-empire/chapter-12-seize-the-future/"
-console.log(url.replace('reborn', '-')) //replace reborn with -
+console.log(url.replace('reborn', '-Aaryan')) //replace reborn with -
+
+console.log(url.includes('europe')) //checks whether does url have europe in it or not.
