@@ -30,3 +30,29 @@ let myCreateDate=new Date(2024,7,31,5,3)
 // yyyy,mm,dd,time
 //indexing of month starts from 0
 console.log(myCreateDate);
+//2024-08-31T05:03:00.000Z
+
+/*
+// let myCreatedDate = new Date("2023-01-14")
+let myCreatedDate = new Date("01-14-2023")
+// console.log(myCreatedDate.toLocaleString());
+*/
+
+
+let myTimeStamp = Date.now() //current time im Ms
+
+// console.log(myTimeStamp);
+// console.log(myCreatedDate.getTime());
+// console.log(Math.floor(Date.now()/1000));
+
+let newDate = new Date()
+console.log(newDate);
+console.log(newDate.getMonth() + 1);
+console.log(newDate.getDay());
+
+// `${newDate.getDay()} and the time `
+
+newDate.toLocaleString('default', {
+    weekday: "long",
+    
+})
