@@ -3,15 +3,15 @@
 
 let myDate=new Date()
 // console.log(myDate);** from down here
-console.log(myDate.toString());
-console.log(myDate.toLocaleDateString());
-console.log(myDate.toDateString());
-console.log(myDate.toISOString());
-console.log(myDate.toJSON());
-console.log(myDate.toLocaleString());
-console.log(myDate.toLocaleTimeString());
-console.log(myDate.toTimeString())
-console.log(myDate.getTimezoneOffset())
+// console.log(myDate.toString());
+// console.log(myDate.toLocaleDateString());
+// console.log(myDate.toDateString());
+// console.log(myDate.toISOString());
+// console.log(myDate.toJSON());
+// console.log(myDate.toLocaleString());
+// console.log(myDate.toLocaleTimeString());
+// console.log(myDate.toTimeString())
+// console.log(myDate.getTimezoneOffset())
 
 /*
 Output in Sequence:-
@@ -26,3 +26,7 @@ Mon Feb 26 2024
 */
 
 
+let myCreateDate=new Date(2024,7,31,5,3)
+// yyyy,mm,dd,time
+//indexing of month starts from 0
+console.log(myCreateDate);
