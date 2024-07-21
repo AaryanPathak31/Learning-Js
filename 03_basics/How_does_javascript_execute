@@ -1,0 +1,55 @@
+// How Code is Executed in Js.
+/*
+JavaScript Execution Context.
+when you run the js file, first Global Execution context(EC) is made. this is compulsory. and stored in this.
+js is single thread.
+Functional Execution Context and Eval Execution Context.
+Js is run in 2 phases starting with
+    -Memory **Creation Phase**  => In this phase Memory is created i.e. no execution , just memory is created to store variables.
+    -Execution Phase => Files is executed here.
+
+
+Example:- 
+Example of a code:-
+        let val1=10
+        let val2=5
+        function addNum(num1,num2){
+            let total = num1+num2
+            return total
+        }
+        let result1 = addNumber(val1, val2)
+        let result2 = addNum(10,2)
+
+
+How is it executed...........
+in the start:-
+1. Global Execution then saved in this.
+    Gloabl Execution => this.
+
+2. Memory Phase
+  how would it be saved.
+    val1=> undefined
+    val2 => undefined
+    addnum => undefined
+    result1 => undefined
+    result2 => undefined
+
+3. Execution Phase
+    val1 <= 10
+    val2 <= 5
+    addNum = > new execution context is created.
+            => new variable environment + Execution thread is created.
+                  => Memory phase is created
+                        val1 => undefined
+                        val2 => undefined
+                        total => undefined 
+                  => Execution Context 
+                          num1 = > 10
+                          num2  => 5
+                          total => 15
+                  **As this is created and calculated, after execution, it is deleted.
+
+                  now this total is send to global execution in this keyword.
+
+                  After this, result2 is calculated the same as result1. 
+*/
