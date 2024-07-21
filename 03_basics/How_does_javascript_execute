@@ -1,4 +1,4 @@
-// How Code is Executed in Js.
+// How Code is Executed in Js.   => CallStack
 /*
 JavaScript Execution Context.
 when you run the js file, first Global Execution context(EC) is made. this is compulsory. and stored in this.
