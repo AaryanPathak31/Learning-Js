@@ -26,9 +26,6 @@
   <body>
     <nav>
       <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
     </nav>
     <div class="container">
       <h1>BMI Calculator</h1>
@@ -37,6 +34,7 @@
         <p><label>Weight in KG: </label><input type="text" id="weight" /></p>
         <button>Calculate</button>
         <div id="results"></div>
+        <div id="guide"></div>
         <div id="weight-guide">
           <h3>BMI Weight Guide</h3>
           <p>Under Weight = Less than 18.6</p>
@@ -76,6 +74,12 @@
   margin-top: 20px;
   color: rgb(241, 241, 241);
 }
+#guide {
+  font-size: 35px;
+  margin-left: 90px;
+  margin-top: 20px;
+  color: rgb(241, 241, 241);
+}
 
 button {
   width: 150px;
@@ -95,8 +99,48 @@ button {
 h1 {
   padding-left: 15px;
   padding-top: 25px;
-  
 }
 ```
+
+## Javascript
+``` Javascript
+const form = document.querySelector('form');
+// this usecase will give you empty
+// const height = parseInt(document.querySelector('#height').value)
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = `Please give a valid height ${height}`;
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = `Please give a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    //show the result
+    results.innerHTML = `<span> BMI is ${bmi}</span>`;
+    const grade = document.querySelector('#guide');
+    if (bmi <= 18.6) {
+      grade.innerHTML = `<span>Under Weight</span>`;
+    } else if (bmi >= 18.6 && bmi <= 24.9) {
+      grade.innerHTML = `<span>Normal Range</span>`;
+    } else {
+      grade.innerHTML = `<span>Over Weight</span>`;
+    }
+  }
+});
+```
+##
+![alt text](image-1.png)
+#
+![alt text](image-2.png)
+##
+![alt text](image-3.png)
+
+##
 
     
